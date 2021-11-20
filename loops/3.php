@@ -8,18 +8,16 @@
 <table border="1">
     <tr>
         <td>Номер</td>
-        <td>Число</td>
+        <td colspan="100">Число</td>
     </tr>
     <?php
     $k = 10;
     $n = 6;
     for ($i = 1; $i <= $k; $i++) {
         echo "<tr style='color:";
-        for ($o = 0; $o<$k; $o++) {
-            $x = (int)(255/($k-1)*$o);
-            $fontcolor = "rgb($x, $x, $x)";
-            echo $fontcolor;
-        }
+        $x = (int)(255/($k-1)*$i);
+        $fontcolor = "rgb($x, $x, $x)";
+        echo $fontcolor;
         echo "'><td>$i</td>";
         for ($j = 0; $j <= $n; $j++) {
             echo "<td>" . rand(1,99) . "</td>";

@@ -7,7 +7,7 @@
         <td>Число</td>
     </tr>
     <?php
-    $k = 10;
+    $k = 20;
     $color = null;
     $color1 = 'green';
     $color2 = 'yellow';

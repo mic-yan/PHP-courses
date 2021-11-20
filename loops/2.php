@@ -8,7 +8,7 @@
     </tr>
     <?php
     $k = 10;
-    $n = 6;
+    $n = 8;
     $color = null;
     $color1 = 'green';
     $color2 = 'yellow';
