@@ -1,6 +1,6 @@
 <html>
 <!-- Напишите скрипт, выводящий таблицу из k случайных чисел с чередованием фона строк
-из 3 цветов – цвет1, цвет2, цвет3, цвет1, цвет2, цвет3 и т.д. в n столбцов --!>
+из 3 цветов – цвет1, цвет2, цвет3, цвет1, цвет2, цвет3 и т.д. в n кол-во столбцов--!>
 <table border="1">
     <tr>
         <td>Номер</td>
@@ -8,36 +8,30 @@
     </tr>
     <?php
     $k = 10;
-    $n = 10;
-    $c = null;
-    $c1 = 'green';
-    $c2 = 'yellow';
-    $c3 = 'red';
+    $n = 6;
+    $color = null;
+    $color1 = 'green';
+    $color2 = 'yellow';
+    $color3 = 'red';
     for ($i = 1; $i <= $k; $i++) {
-        if ($c == $c1) {
-            $c = $c2;
-            echo "<tr style='background-color:$c'><td>$i</td>";
-            for ($q = 1; $q <= $n; $q++) {
-                echo "<td>" . rand(1, 99) . "</td>";
-            }
-            echo "</tr>";
-        } elseif ($c == $c2) {
-            $c = $c3;
-            echo "<tr style='background-color:$c'><td>$i</td>";
-            for ($q = 1; $q <= $n; $q++) {
-                echo "<td>" . rand(1, 99) . "</td>";
-            }
-            echo "</tr>";
+        echo "<tr style='background-color:";
+        if ($color == $color1) {
+            $color = $color2;
+            echo $color;
+        } elseif ($color == $color2) {
+            $color = $color3;
+            echo $color;
         } else {
-            $c = $c1;
-            echo "<tr style='background-color:$c'><td>$i</td>";
-            for ($q = 1; $q <= $n; $q++) {
-                echo "<td>" . rand(1, 99) . "</td>";
-            }
-            echo "</tr>";
+            $color = $color1;
+            echo $color;
         }
+        echo "'><td>$i</td>";
+        $number = rand(1,99);
+        for ($j = 0; $j <= $n; $j++) {
+            echo "<td>$number</td>";
+        }
+        echo "</tr>";
     }
-
     ?>
 </table>
 </html>

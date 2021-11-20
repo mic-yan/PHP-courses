@@ -8,23 +8,24 @@
     </tr>
     <?php
     $k = 10;
-    $c = null;
-    $c1 = 'green';
-    $c2 = 'yellow';
-    $c3 = 'red';
+    $color = null;
+    $color1 = 'green';
+    $color2 = 'yellow';
+    $color3 = 'red';
     for ($i = 1; $i <= $k; $i++) {
-        if ($c == $c1) {
-            $c = $c2;
-            echo "<tr style='background-color:$c'><td>$i</td><td>" . rand(1, 99) . "</tr></td>";
-        } elseif ($c == $c2) {
-            $c = $c3;
-            echo "<tr style='background-color:$c'><td>$i</td><td>" . rand(1, 99) . "</tr></td>";
+        echo "<tr style='background-color:";
+        if ($color == $color1) {
+            $color = $color2;
+            echo $color;
+        } elseif ($color == $color2) {
+            $color = $color3;
+            echo $color;
         } else {
-            $c = $c1;
-            echo "<tr style='background-color:$c'><td>$i</td><td>" . rand(1, 99) . "</tr></td>";
+            $color = $color1;
+            echo $color;
         }
+        echo "'><td>$i</td><td>" . rand(1, 99) . "</td></tr>";
     }
-
     ?>
 </table>
 </html>
