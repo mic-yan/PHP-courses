@@ -13,18 +13,14 @@
     $color2 = 'yellow';
     $color3 = 'red';
     for ($i = 1; $i <= $k; $i++) {
-        echo "<tr style='background-color:";
         if ($color == $color1) {
             $color = $color2;
-            echo $color;
         } elseif ($color == $color2) {
             $color = $color3;
-            echo $color;
         } else {
             $color = $color1;
-            echo $color;
         }
-        echo "'><td>$i</td><td>" . rand(1, 99) . "</td></tr>";
+        echo "<tr style='background-color:".$color."'><td>$i</td><td>" . rand(1, 99) . "</td></tr>";
     }
     ?>
 </table>

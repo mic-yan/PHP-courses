@@ -4,7 +4,7 @@
 <table border="1">
     <tr>
         <td>Номер</td>
-        <td>Число</td>
+        <td colspan="100">Число</td>
     </tr>
     <?php
     $k = 10;
@@ -14,21 +14,16 @@
     $color2 = 'yellow';
     $color3 = 'red';
     for ($i = 1; $i <= $k; $i++) {
-        echo "<tr style='background-color:";
         if ($color == $color1) {
             $color = $color2;
-            echo $color;
         } elseif ($color == $color2) {
             $color = $color3;
-            echo $color;
         } else {
             $color = $color1;
-            echo $color;
         }
-        echo "'><td>$i</td>";
-        $number = rand(1,99);
+        echo "<tr style='background-color:".$color."'><td>$i</td>";
         for ($j = 0; $j <= $n; $j++) {
-            echo "<td>$number</td>";
+            echo "<td>" . rand(1,99) . "</td>";
         }
         echo "</tr>";
     }
