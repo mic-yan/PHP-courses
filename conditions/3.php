@@ -22,9 +22,11 @@ if (isset($_POST['num_a']) && isset($_POST['num_b']) && isset($_POST['num_c']) &
     $max = $a;
     if ($b > $max) {
         $max = $b;
-    } if ($c > $max) {
+    }
+    if ($c > $max) {
         $max = $c;
-    } if ($d > $max) {
+    }
+    if ($d > $max) {
         $max = $d;
     } echo "Максимальное число - $max";
 }

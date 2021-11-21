@@ -19,11 +19,11 @@
 if (isset($_POST['xnum'])) {
     $x=$_POST['xnum'];
     if ($x>0) {
-        echo "<p style='color:#00ff00'>$x</p>";
+        echo "<p style='color:green'>$x</p>";
     } elseif ($x<0) {
-        echo "<p style='color:#ff0000'>$x</p>";
+        echo "<p style='color:red'>$x</p>";
     } else {
-        echo "<p style='color:#ffff00'>$x</p>";
+        echo "<p style='color:yellow'>$x</p>";
     }
 }
 ?>

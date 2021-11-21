@@ -29,10 +29,12 @@ if (isset($_POST['bag_l']) && isset($_POST['bag_w']) && isset($_POST['bag_h']) &
     $item_w = $_POST['item_w'];
     $item_h = $_POST['item_h'];
 
-    if (($bag_l >= $item_l && $bag_w >= item_w && $bag_h >= $item_h) ||
-        ($bag_l >= $item_l && $bag_w >= $item_h && $bag_h >= $item_w) ||
-        ($bag_l >= $item_h && $bag_w >= $item_l && $bag_h >= $item_w) ||
-        ($bag_l >= $item_w && $bag_w >= $item_l)) {
+    if (($bag_l >= $item_l && $bag_w >= $item_w && $bag_h >= $item_h) || // 1
+        ($bag_l >= $item_w && $bag_w >= $item_l && $bag_h >= $item_h) || // 2
+        ($bag_l >= $item_w && $bag_w >= $item_h && $bag_h >= $item_l) || // 3
+        ($bag_l >= $item_h && $bag_w >= $item_w && $bag_h >= $item_l) || // 4
+        ($bag_l >= $item_h && $bag_w >= $item_l && $bag_h >= $item_w) || // 5
+        ($bag_l >= $item_l && $bag_w >= $item_h && $bag_h >= $item_w)){ // 6
         echo "<br>Товар помещается в сумку";
     } else {
         echo "<br>Товар не помещается в сумку";

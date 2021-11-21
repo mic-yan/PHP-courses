@@ -20,18 +20,18 @@
         $min = $a;
         if ($b < $min) {
             $min = $b;
-        } if ($c < $min) {
+        }
+        if ($c < $min) {
             $min = $c;
         }
         $max = $a;
         if ($b > $max) {
             $max = $b;
-        } if ($c > $max) {
+        }
+        if ($c > $max) {
             $max = $c;
         }
-        echo "$min + $max <br>";
-        $summ = $min + $max;
-        echo "$summ";
+        echo $summ = $min + $max;
     }
 ?>
 </body>
