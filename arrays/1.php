@@ -12,10 +12,12 @@ for ($i = 1; $i < $n; $i++) //вычисление максимального и
 {
     if ($a[$i] < $amin)
     {
+        $amin = $a[$i];
         $imin = $i;
     }
     if ($a[$i] > $amax)
     {
+        $amax = $a[$i];
         $imax = $i;
     }
 }

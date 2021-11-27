@@ -11,7 +11,5 @@ Symfony Philosophy. Embracing and promoting professionalism, best practices, sta
 $word = 'Symfony';
 $count = mb_substr_count($text, $word);
 echo $count.'<br>';
+echo $result = str_replace($word, '<span style="color:red;">'.$word.'</span>', $text);
 
-// $result = preg_replace('#\b' . $word . '\b#i', '<span style="color: red;">$0</span>', $text);
-$result = str_replace($word, '<span style="color:red;">'.$word.'</span>', $text);
-echo $result;
