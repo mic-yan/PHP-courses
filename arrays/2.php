@@ -8,23 +8,20 @@ $a = range(1, 10); // создание массива
 shuffle($a); // рандомизация значений
 print_r($a); // вывод значений
 $n = count($a); // подсчет кол-ва значений
-
-for ($i = 0; $i < $n-1; $i++) {
-
-
-
-}
-    $minKey = $currentKey;
-    $minVal = $sortingArray[$currentKey];
-    for ($nextKey = $minKey + 1; $nextKey < $count; $nextKey++){
-        if ($sortingArray[$nextKey] < $minVal) {
-            $minKey = $nextKey;
-            $minVal = $sortingArray[$nextKey];
-        }
-    }
-    if ($minVal < $sortingArray[$currentKey]) {
-        $sortingArray[$minKey] = $sortingArray[$currentKey];
-        $sortingArray[$currentKey] = $minVal;
+echo "<br>";
+ foreach ($a as $key => $value) {
+    if (fmod($key, 2) == 0) {
+        $temp = $a[]
     }
 }
-var_dump($sortingArray);
+
+// for ($i = 0; $i < $n -1; $i++) {
+//    for ($o = $n -1; $o > $i; $o--) {
+//        if ($a[$o] < $a[$o -1]) {
+//            $temp = $a[$o];
+//            $a[$o] = $a[$o -1];
+//            $a[$o - 1] = $temp;
+//        }
+//    }
+//}
+//var_dump($a);
