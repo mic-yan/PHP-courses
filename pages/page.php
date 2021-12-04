@@ -9,7 +9,6 @@
     <?php
     $a = output_text ($page_text);
     $a = one_word ('что', $a);
-    $a = bold_first_letter($a);
     echo $a;
     ?>
 </div>

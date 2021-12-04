@@ -27,9 +27,10 @@ function one_word ($word, $page_text){
 
 // обрамление первой буквы предложения жирным шрифтом
 function bold_first_letter ($page_text) {
-    return preg_replace_callback('/(^|[.]\s*)([А-Я])/u', function($matches){
+    $result = preg_replace_callback('/(^|[.]\s*)([А-Я])/u', function($matches){
         return $matches[1]."<span style='font-weight: bold'>".$matches[2]."</span>";
     }, $page_text);
+    return $result;
 }
 
 
@@ -83,7 +84,10 @@ function output_text ($page_text)
 {
     $html = '';
     foreach ($page_text as $key => $item) {
-        $html .= "<div>$item<hr></div>";
+        $result = preg_replace_callback('/(^|[.]\s*)([А-Я])/u', function($matches){
+            return $matches[1]."<span style='font-weight: bold'>".$matches[2]."</span>";
+        }, $item);
+        $html .= "<div>$result<hr></div>";
     }
     return $html;
 }
