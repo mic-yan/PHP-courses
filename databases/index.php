@@ -4,7 +4,7 @@ require_once 'functions.php';
 
 try {
 
-$n = 2;
+$n = 4;
 $page = page_validation();
 include('db_conn.php');
 $mysqli = new mysqli(SERVER, USERNAME, PASSWORD, DBNAME);
@@ -26,6 +26,7 @@ $mess_num = number_of_messages($data);
 //    echo $mess_num;
 $page_num = number_of_pages($mess_num, $n);
 //    echo $page_num;
+
 $first_page = get_first_message($page, $n);
 //    echo $first_page;
 $page_content = get_page_content($data, $first_page, $n);
