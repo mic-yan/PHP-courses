@@ -43,7 +43,7 @@ function output_content ($data)
     $html = '';
     foreach ($data as $row) {
         $result = $row['id'] . '. ' . $row['user'] . ' - ' . $row['message_text'] . ' (' .
-            $row['message_time'] . ')<br/>';
+            $row['message_time'] . ')' . " <a href="."/img/". $row['image'] .">image</a> <br/>"; // upd: добавил ссылку на картинку из скрипта в forms
     $html .= "<div>$result<hr></div>";
 }
     return $html;
