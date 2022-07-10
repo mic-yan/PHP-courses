@@ -7,19 +7,18 @@
 $a = range(1, 10); // создание массива
 shuffle($a); // рандомизация значений
 print_r($a); // вывод значений
-$n = count($a); // подсчет кол-ва значений
 
-
-echo "<br>";
 $arr_even = [];
 $arr_odd = [];
-foreach ($a as $key => $value) {
+
+foreach ($a as $key => $value) { // сортировка на 2 массива с четными и нечетными ключами
     if (($key % 2) == 0) {
         $arr_even[$key] = $value;
     } else {
         $arr_odd[$key] = $value;
     }
 }
-print_r($arr_odd);
-print_r($arr_even);
+
+print_r($arr_odd); // массив с нечетными ключами
+print_r($arr_even); // массив с четными ключами
 print_r($arr_odd + $arr_even);
