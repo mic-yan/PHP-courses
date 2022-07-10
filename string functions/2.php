@@ -1,4 +1,5 @@
 <?php
+
 // Вывести в браузер статистику файла – количество абзацев,
 // предложений, слов, символов.
 
@@ -10,9 +11,10 @@ Symfony Philosophy. Embracing and promoting professionalism, best practices, sta
 
 echo $text;
 
-$article = count(explode(PHP_EOL, $text));   // а можно так: $article = substr_count( $text, PHP_EOL) + 1; ?
+$article = count(explode(PHP_EOL, $text));
+// $article = count(preg_split("/\r\n|\n|\r/", $text));
 
-$sentence = substr_count($text, '.');
+$sentence = substr_count($text, '. ');
 
 $words = count(explode(' ', $text)); // а можно так: $words = str_word_count($text); ?
 

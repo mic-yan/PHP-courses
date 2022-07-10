@@ -1,4 +1,5 @@
 <?php
+
 // Определить, сколько раз встречается в тексте слово Symfony и вывести текст,
 // выделив его в тексте цветом.
 
@@ -12,4 +13,3 @@ $word = 'Symfony';
 $count = mb_substr_count($text, $word);
 echo $count.'<br>';
 echo $result = str_replace($word, '<span style="color:red;">'.$word.'</span>', $text);
-
